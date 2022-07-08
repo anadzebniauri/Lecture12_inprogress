@@ -18,8 +18,14 @@ class ViewController: UIViewController {
     @IBAction func appBackground(_ sender: Any) {
         let uiColor: [UIColor] = [.red, .orange, .green]
         self.view.backgroundColor = uiColor.randomElement() ?? .black
+//        if labelColor.textColor == view.backgroundColor {
+//            print("Same Color")
+//        }
         if labelColor.textColor == view.backgroundColor {
-            print("Same Color")
+            labelText.text = "Same Color"
+        }
+        else {
+            labelText.text = "Different"
         }
     }
     
@@ -28,11 +34,19 @@ class ViewController: UIViewController {
         let uiColor: [UIColor] = [.red, .orange, .green]
         labelColor.textColor = uiColor.randomElement() ?? .black
         if labelColor.textColor == view.backgroundColor {
-            print("Same Color")
+            labelText.text = "Same Color"
+        }
+        else {
+            labelText.text = "Different"
         }
     }
     
     @IBOutlet weak var labelColor: UILabel!
+    
+    @IBOutlet weak var labelText: UILabel!
+
+     
+    
 }
 
 
