@@ -11,16 +11,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.labelColor.layer.cornerRadius = 20
+        self.labelText.layer.cornerRadius = 20
+        self.appBackground.layer.cornerRadius = 20
+        self.labelBackground.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
 
     @IBAction func appBackground(_ sender: Any) {
         let uiColor: [UIColor] = [.red, .orange, .green]
         self.view.backgroundColor = uiColor.randomElement() ?? .black
-//        if labelColor.textColor == view.backgroundColor {
-//            print("Same Color")
-//        }
         if labelColor.textColor == view.backgroundColor {
             labelText.text = "Same Color"
         }
@@ -42,10 +42,9 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var labelColor: UILabel!
-    
     @IBOutlet weak var labelText: UILabel!
-
-     
+    @IBOutlet weak var appBackground: UIButton!
+    @IBOutlet weak var labelBackground: UIButton!
     
 }
 

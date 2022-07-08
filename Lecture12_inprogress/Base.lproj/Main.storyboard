@@ -16,49 +16,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1H-gG-JLf">
-                                <rect key="frame" x="142" y="205" width="127" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.6154428421" green="0.56758599570000001" blue="0.96990765160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="App Background"/>
-                                <connections>
-                                    <action selector="appBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MmO-wI-bOK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKe-bj-iaF">
-                                <rect key="frame" x="142" y="369" width="127" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.6154428421" green="0.56758599570000001" blue="0.96990765160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="label background"/>
-                                <connections>
-                                    <action selector="labelBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eb2-II-yvC"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRU-XZ-X8a">
-                                <rect key="frame" x="165" y="550" width="85" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="J6Z-2b-AiQ">
+                                <rect key="frame" x="20" y="144" width="426" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1H-gG-JLf">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="31"/>
+                                        <color key="backgroundColor" red="0.6154428421" green="0.56758599570000001" blue="0.96990765160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="App Background">
+                                            <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="appBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MmO-wI-bOK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKe-bj-iaF">
+                                        <rect key="frame" x="228" y="0.0" width="198" height="31"/>
+                                        <color key="backgroundColor" red="0.6154428421" green="0.56758599570000001" blue="0.96990765160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="label background">
+                                            <fontDescription key="titleFontDescription" type="system" weight="thin" pointSize="14"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="labelBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eb2-II-yvC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="vRA-is-KrX"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJT-Ly-xNl">
+                                <rect key="frame" x="126" y="432" width="217" height="33"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="QcP-4n-aiy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJT-Ly-xNl">
-                                <rect key="frame" x="143" y="684" width="129" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.6154428421" green="0.56758599570000001" blue="0.96990765160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRU-XZ-X8a">
+                                <rect key="frame" x="159" y="295" width="150" height="17"/>
+                                <color key="backgroundColor" red="1" green="0.72954189777374268" blue="0.76837724447250366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="W8O-qr-PrE"/>
+                                    <constraint firstAttribute="width" constant="150" id="xzZ-c1-aTo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bRU-XZ-X8a" secondAttribute="trailing" constant="159" id="52e-Fl-OB1"/>
+                            <constraint firstItem="J6Z-2b-AiQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="FYI-8z-LMg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qJT-Ly-xNl" secondAttribute="bottom" constant="180" id="KbC-Gj-4u3"/>
+                            <constraint firstItem="qJT-Ly-xNl" firstAttribute="top" secondItem="bRU-XZ-X8a" secondAttribute="bottom" constant="120" id="LMR-kv-0q2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qJT-Ly-xNl" secondAttribute="trailing" constant="125" id="Xjz-NX-mhk"/>
+                            <constraint firstItem="bRU-XZ-X8a" firstAttribute="top" secondItem="J6Z-2b-AiQ" secondAttribute="bottom" constant="120" id="nj6-t2-woh"/>
+                            <constraint firstItem="qJT-Ly-xNl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="re4-Hm-iA1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J6Z-2b-AiQ" secondAttribute="trailing" constant="22" id="tIR-g2-ff1"/>
+                            <constraint firstItem="J6Z-2b-AiQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wQv-DE-dRf"/>
+                            <constraint firstItem="bRU-XZ-X8a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="zx9-IW-ejz"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="appBackground" destination="J1H-gG-JLf" id="HAE-Dy-57x"/>
+                        <outlet property="labelBackground" destination="rKe-bj-iaF" id="c6i-gO-JJj"/>
                         <outlet property="labelColor" destination="bRU-XZ-X8a" id="lox-J1-86O"/>
                         <outlet property="labelText" destination="qJT-Ly-xNl" id="2W1-z3-tsl"/>
                     </connections>
@@ -69,14 +98,11 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
