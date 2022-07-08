@@ -9,6 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var labelColor: UILabel!
+    @IBOutlet weak var labelText: UILabel!
+    @IBOutlet weak var appBackground: UIButton!
+    @IBOutlet weak var labelBackground: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.labelColor.layer.cornerRadius = 20
@@ -29,7 +35,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func labelBackground(_ sender: Any) {
         let uiColor: [UIColor] = [.red, .orange, .green]
         labelColor.textColor = uiColor.randomElement() ?? .black
@@ -40,12 +45,6 @@ class ViewController: UIViewController {
             labelText.text = "Different"
         }
     }
-    
-    @IBOutlet weak var labelColor: UILabel!
-    @IBOutlet weak var labelText: UILabel!
-    @IBOutlet weak var appBackground: UIButton!
-    @IBOutlet weak var labelBackground: UIButton!
-    
 }
 
 
